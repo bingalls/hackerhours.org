@@ -1,4 +1,4 @@
-name: Hacker Hours
+title: Hacker Hours
 markdown: kramdown
 exclude:
   - node_modules
@@ -10,3 +10,7 @@ defaults:
       layout: default
 # https://github.com/jekyll/github-metadata/issues/62
 repository: afeld/hackerhours.org
+plugins:
+  - jekyll-postcss
+# url: "" # the base hostname & protocol, e.g. http://hackerhours.org
+# baseurl: "" # the subpath of your site, e.g. /blog
