@@ -1,11 +1,37 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  important: true,
+  // Active dark mode on class basis
+  darkMode: "class",
+  i18n: {
+    locales: ["en-US"],
+    defaultLocale: "en-US",
+  },
+  purge: [
+    './_includes/**/*.html',
+    './_layouts/**/*.html',
+    './_posts/*.md',
+    './*.html',
+  ],
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: (theme) => ({
+        check: "url('/icons/check.svg')",
+        landscape: "url('/images/landscape/2.jpg')",
+      }),
+    },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ["checked"],
+      borderColor: ["checked"],
+      inset: ["checked"],
+      zIndex: ["hover", "active"],
+    },
   },
-  plugins: [],
-}
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+  future: {
+    purgeLayersByDefault: true,
+  },
+};

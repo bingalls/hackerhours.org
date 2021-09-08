@@ -2,11 +2,15 @@
   "name": "hackerhours.org",
   "private": true,
   "dependencies": {
-    "autoprefixer": "^10.3.4",
     "gm": "^1.23.1",
+    "puppeteer": "^1.14.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/typography": "^0.4.1",
+    "autoprefixer": "^10.3.4",
+    "cssnano": "^5.0.8",
     "postcss": "^8.3.6",
     "postcss-import": "^14.0.2",
-    "puppeteer": "^1.14.0",
     "tailwindcss": "^2.2.11"
   }
 }
